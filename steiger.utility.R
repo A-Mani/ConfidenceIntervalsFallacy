@@ -1,4 +1,5 @@
 require(coda) ## For HPD
+## code can be simplified
 
 max.likelihood.omega2 = Vectorize(function(Fstat, df1, df2){
   optimize(likelihood2.omega2, interval = c(0,1), Fstat = Fstat, df1 = df1, df2 = df2, log = TRUE, maximum = TRUE)$maximum
